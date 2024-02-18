@@ -31,8 +31,36 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'No Pulp Table – hello from the editor!', 'no-pulp-table' ) }
-		</p>
+		<div { ...useBlockProps() }>
+			<h2>Simple HTML Table</h2>
+
+			<table>
+				<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Country</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>John Doe</td>
+					<td>30</td>
+					<td>USA</td>
+				</tr>
+				<tr>
+					<td>Jane Smith</td>
+					<td>25</td>
+					<td>Canada</td>
+				</tr>
+				<tr>
+					<td>David Johnson</td>
+					<td>40</td>
+					<td>UK</td>
+				</tr>
+				</tbody>
+			</table>
+
+		</div>
 	);
 }
