@@ -25,6 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function no_pulp_table_no_pulp_table_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type( __DIR__ . '/build/blocks/table' );
 }
 add_action( 'init', 'no_pulp_table_no_pulp_table_block_init' );

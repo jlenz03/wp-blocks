@@ -15,7 +15,8 @@ import { useBlockProps, RichText} from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export default function save() {
+import StarRating from "../../../components/StarRating";
+export default function save({attributes}) {
 	let starIcons = Array(5).fill('★', 0, attributes.stars).join('');
 	return (
 		<div { ...useBlockProps.save() }>
@@ -25,7 +26,7 @@ export default function save() {
 					<img src={attributes.imgUrl} alt="Photo of a Taylor Swift Album"/>
 				</div>
 				<div className="text">
-					<p className="author">{attributes.artist}</p>
+					<p className="artist">{attributes.artist}</p>
 					<p className="favorite">{attributes.favorite}</p>
 				</div>
 				<div className="stars">{starIcons}</div>

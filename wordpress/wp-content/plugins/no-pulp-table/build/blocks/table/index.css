@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 .stars .star.on {
-  color: yellow;
+  color: #f5d46b;
 }
 .stars .star.off {
   color: grey;

@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-import { __ } from '@wordpress/i18n';
+// import { __ } from '@wordpress/i18n';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -31,7 +31,8 @@ import {SelectControl} from "@wordpress/components";
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit(props) {
+	const {attributes, setAttributes} = props
 	return (
 		<div { ...useBlockProps() }>
 
@@ -53,12 +54,12 @@ export default function Edit() {
 
 					</div>
 					<div className="text">
-						<PlainText cassName ="artist"
-								   placeholder="Taylor Swift"
+						<PlainText className ="artist"
+								   placeholder="Artist Name"
 								   value={attributes.artist}
 								   onChange={artist => setAttributes({artist})}
 						/>
-						<PlainText cassName ="text"
+						<PlainText className ="text"
 								   placeholder="Favorite Song"
 								   value={attributes.favorite}
 								   onChange={favorite => setAttributes({favorite})}
@@ -66,18 +67,7 @@ export default function Edit() {
 
 					</div>
 					<div className="stars">
-						<SelectControl
-							label="Select a Rating"
-							value ={attributes.stars}
-							onChange={stars => setAttributes({stars:parseInt(stars)})}
-							options={[
-								{value: 1, label:'★'},
-								{value: 2, label:'★★'},
-								{value: 3, label:'★★★'},
-								{value: 4, label:'★★★★'},
-								{value: 5, label:'★★★★★'},
-							]}
-						/>
+
 						<StarRating rating={attributes.stars} setRating={stars => setAttributes({stars:parseInt(stars)})} />
 
 					</div>

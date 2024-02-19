@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "No Pulp Table",
   "category": "widgets",
-  "icon": "table",
+  "icon": "editor-table",
   "description": "For those who don't like extra pulp in their oj",
   "example": {},
   "supports": {

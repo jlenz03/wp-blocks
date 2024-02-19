@@ -51,21 +51,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/table/editor.scss");
-/* harmony import */ var _components_StarRating__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../components/StarRating */ "./components/StarRating.js");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/table/editor.scss");
+/* harmony import */ var _components_StarRating__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/StarRating */ "./components/StarRating.js");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
 
 /**
  * Retrieves the translation of text.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-
+// import { __ } from '@wordpress/i18n';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -93,14 +91,18 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @return {Element} Element to render.
  */
-function Edit() {
+function Edit(props) {
+  const {
+    attributes,
+    setAttributes
+  } = props;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "album-information"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "photo"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaUpload, {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
     allowedTypes: 'image',
     onSelect: file => {
       console.log(file);
@@ -117,15 +119,15 @@ function Edit() {
     })
   }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "text"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
-    cassName: "artist",
-    placeholder: "Taylor Swift",
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PlainText, {
+    className: "artist",
+    placeholder: "Artist Name",
     value: attributes.artist,
     onChange: artist => setAttributes({
       artist
     })
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.PlainText, {
-    cassName: "text",
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PlainText, {
+    className: "text",
     placeholder: "Favorite Song",
     value: attributes.favorite,
     onChange: favorite => setAttributes({
@@ -133,29 +135,7 @@ function Edit() {
     })
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "stars"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
-    label: "Select a Rating",
-    value: attributes.stars,
-    onChange: stars => setAttributes({
-      stars: parseInt(stars)
-    }),
-    options: [{
-      value: 1,
-      label: '★'
-    }, {
-      value: 2,
-      label: '★★'
-    }, {
-      value: 3,
-      label: '★★★'
-    }, {
-      value: 4,
-      label: '★★★★'
-    }, {
-      value: 5,
-      label: '★★★★★'
-    }]
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_StarRating__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_StarRating__WEBPACK_IMPORTED_MODULE_3__["default"], {
     rating: attributes.stars,
     setRating: stars => setAttributes({
       stars: parseInt(stars)
@@ -233,6 +213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_StarRating__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/StarRating */ "./components/StarRating.js");
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -251,7 +232,10 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @return {Element} Element to render.
  */
-function save() {
+
+function save({
+  attributes
+}) {
   let starIcons = Array(5).fill('★', 0, attributes.stars).join('');
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
@@ -265,7 +249,7 @@ function save() {
   })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "text"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "author"
+    className: "artist"
   }, attributes.artist), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "favorite"
   }, attributes.favorite)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -351,23 +335,13 @@ module.exports = window["wp"]["components"];
 
 /***/ }),
 
-/***/ "@wordpress/i18n":
-/*!******************************!*\
-  !*** external ["wp","i18n"] ***!
-  \******************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["i18n"];
-
-/***/ }),
-
 /***/ "./src/blocks/table/block.json":
 /*!*************************************!*\
   !*** ./src/blocks/table/block.json ***!
   \*************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jl/no-pulp-table","version":"0.1.0","title":"No Pulp Table","category":"widgets","icon":"table","description":"For those who don\'t like extra pulp in their oj","example":{},"supports":{"html":false},"textdomain":"no-pulp-table","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["jl","hera","no","pulp","table"],"attributes":{"stars":{"type":"number","default":3},"imgUrl":{"type":"string","default":"https://placehold.it/75"},"artist":{"type":"string","source":"text","selector":".artist"},"favorite":{"type":"string","source":"text","selector":".favorite"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jl/no-pulp-table","version":"0.1.0","title":"No Pulp Table","category":"widgets","icon":"editor-table","description":"For those who don\'t like extra pulp in their oj","example":{},"supports":{"html":false},"textdomain":"no-pulp-table","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","keywords":["jl","hera","no","pulp","table"],"attributes":{"stars":{"type":"number","default":3},"imgUrl":{"type":"string","default":"https://placehold.it/75"},"artist":{"type":"string","source":"text","selector":".artist"},"favorite":{"type":"string","source":"text","selector":".favorite"}}}');
 
 /***/ })
 
