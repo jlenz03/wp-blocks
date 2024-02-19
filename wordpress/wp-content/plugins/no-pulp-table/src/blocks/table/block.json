@@ -16,5 +16,27 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"viewScript": "file:./view.js",
-  "keywords": ["testimonial", "jl", "hera", "no", "pulp"]
+  "keywords": [ "jl", "hera", "no", "pulp", "table"],
+
+  "attributes": {
+	"stars": {
+	  "type": "number",
+	  "default": 3
+	},
+	"imgUrl": {
+	  "type": "string",
+	  "default": "https://placehold.it/75"
+	},
+	"artist": {
+	  "type": "string",
+	  "source": "text",
+	  "selector": ".artist"
+	},
+	"favorite": {
+	  "type": "string",
+	  "source": "text",
+	  "selector": ".favorite"
+	}
+
+  }
 }

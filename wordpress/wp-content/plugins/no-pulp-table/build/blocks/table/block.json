@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "jl/no-pulp-table",
+  "version": "0.1.0",
+  "title": "No Pulp Table",
+  "category": "widgets",
+  "icon": "table",
+  "description": "For those who don't like extra pulp in their oj",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "no-pulp-table",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "keywords": [
+    "jl",
+    "hera",
+    "no",
+    "pulp",
+    "table"
+  ],
+  "attributes": {
+    "stars": {
+      "type": "number",
+      "default": 3
+    },
+    "imgUrl": {
+      "type": "string",
+      "default": "https://placehold.it/75"
+    },
+    "artist": {
+      "type": "string",
+      "source": "text",
+      "selector": ".artist"
+    },
+    "favorite": {
+      "type": "string",
+      "source": "text",
+      "selector": ".favorite"
+    }
+  }
+}

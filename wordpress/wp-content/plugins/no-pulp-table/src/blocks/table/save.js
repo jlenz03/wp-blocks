@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText} from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -16,36 +16,21 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save() {
+	let starIcons = Array(5).fill('★', 0, attributes.stars).join('');
 	return (
 		<div { ...useBlockProps.save() }>
-			<h2>Simple HTML Table SAVED</h2>
 
-			<table>
-				<thead>
-				<tr>
-					<th>Name</th>
-					<th>Age</th>
-					<th>Country</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td>John Doe</td>
-					<td>30</td>
-					<td>USA</td>
-				</tr>
-				<tr>
-					<td>Jane Smith</td>
-					<td>25</td>
-					<td>Canada</td>
-				</tr>
-				<tr>
-					<td>David Johnson</td>
-					<td>40</td>
-					<td>UK</td>
-				</tr>
-				</tbody>
-			</table>
+
+			<div className="album-information">
+				<div className="photo">
+					<img src={attributes.imgUrl} alt="Photo of a Taylor Swift Album"/>
+				</div>
+				<div className="text">
+					<p className="author">{attributes.artist}</p>
+					<p className="favorite">{attributes.favorite}</p>
+				</div>
+				<div className="stars">{starIcons}</div>
+			</div>
 
 		</div>
 	);
