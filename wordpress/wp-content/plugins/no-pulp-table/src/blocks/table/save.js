@@ -20,7 +20,6 @@ export default function save() {
 	return (
 		<div { ...useBlockProps.save() }>
 
-
 			<div className="album-information">
 				<div className="photo">
 					<img src={attributes.imgUrl} alt="Photo of a Taylor Swift Album"/>

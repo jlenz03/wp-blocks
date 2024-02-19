@@ -34,7 +34,7 @@ import {SelectControl} from "@wordpress/components";
 export default function Edit() {
 	return (
 		<div { ...useBlockProps() }>
-			<div { ...useBlockProps() }>
+
 
 				<div className="album-information">
 					<div className="photo">
@@ -84,6 +84,6 @@ export default function Edit() {
 				</div>
 			</div>
 
-		</div>
+
 	);
 }
