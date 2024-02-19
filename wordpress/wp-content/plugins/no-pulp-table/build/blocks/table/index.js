@@ -133,14 +133,14 @@ function Edit(props) {
     onChange: favorite => setAttributes({
       favorite
     })
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "stars"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_StarRating__WEBPACK_IMPORTED_MODULE_3__["default"], {
     rating: attributes.stars,
     setRating: stars => setAttributes({
       stars: parseInt(stars)
     })
-  }))));
+  })))));
 }
 
 /***/ }),
@@ -252,9 +252,9 @@ function save({
     className: "artist"
   }, attributes.artist), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "favorite"
-  }, attributes.favorite)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, attributes.favorite), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "stars"
-  }, starIcons)));
+  }, starIcons))));
 }
 
 /***/ }),

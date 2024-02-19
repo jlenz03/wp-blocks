@@ -28,8 +28,9 @@ export default function save({attributes}) {
 				<div className="text">
 					<p className="artist">{attributes.artist}</p>
 					<p className="favorite">{attributes.favorite}</p>
+					<div className="stars">{starIcons}</div>
 				</div>
-				<div className="stars">{starIcons}</div>
+
 			</div>
 
 		</div>

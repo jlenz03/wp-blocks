@@ -64,13 +64,13 @@ export default function Edit(props) {
 								   value={attributes.favorite}
 								   onChange={favorite => setAttributes({favorite})}
 						/>
+						<div className="stars">
 
+							<StarRating rating={attributes.stars} setRating={stars => setAttributes({stars:parseInt(stars)})} />
+
+						</div>
 					</div>
-					<div className="stars">
 
-						<StarRating rating={attributes.stars} setRating={stars => setAttributes({stars:parseInt(stars)})} />
-
-					</div>
 				</div>
 			</div>
 

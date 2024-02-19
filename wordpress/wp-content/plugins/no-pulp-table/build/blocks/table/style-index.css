@@ -1,6 +1,16 @@
 /*!****************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/table/style.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************/
+.stars .star:hover {
+  cursor: pointer;
+}
+.stars .star.on {
+  color: #f5d46b;
+}
+.stars .star.off {
+  color: grey;
+}
+
 .wp-block-jl-testimonial {
   border: 0.1em solid #aaaaaa;
   border-radius: 0.5em;
@@ -18,34 +28,28 @@
   width: 10em;
 }
 
-.quote {
-  width: 100%;
-  padding: 1.5em;
-  line-height: 1.5;
-}
-
-.quote-profile {
-  background-color: lightgrey;
+.album-information {
+  background-color: lightblue;
   color: black;
   border-radius: 0 0 0.5em 0.5em;
   padding: 1em;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
 }
-.quote-profile .photo img {
+.album-information .photo img {
   width: 75px;
   height: 75px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-right: 2em;
 }
-.quote-profile .artist, .quote-profile .favorite {
+.album-information .artist, .album-information .favorite {
   margin: 0;
   text-align: right;
   font-weight: 700;
 }
-.quote-profile .favorite {
+.album-information .favorite {
   font-weight: 300;
   font-size: 0.7em;
 }

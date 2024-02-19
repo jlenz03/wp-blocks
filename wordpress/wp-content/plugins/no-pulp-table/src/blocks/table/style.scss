@@ -1,5 +1,5 @@
 
-
+@import "../../../components/StarRating";
 .wp-block-jl-testimonial {
   border: .1em solid #aaaaaa;
   border-radius: .5em;
@@ -19,20 +19,14 @@
 	}
   }
 
-  .quote {
-	width: 100%;
-	padding: 1.5em;
-	line-height: 1.5;
-  }
-
-  .quote-profile {
-	background-color: lightgrey;
+  .album-information {
+	background-color: lightblue;
 	color: black;
 	border-radius: 0 0 .5em .5em;
 	padding: 1em;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	justify-content: center;
+	align-items: start;
 
 	.photo img {
 	  width: 75px;
