@@ -48,7 +48,7 @@ export default function Edit(props) {
 				setAttributes={setAttributes}
 			/>
 
-				<div className="album-information">
+				<div className="wp-block-jl-editor-table">
 					<div className="photo">
 						<MediaUploadCheck>
 							<MediaUpload

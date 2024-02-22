@@ -21,6 +21,7 @@ export class BlockSettings extends React.Component {
 								{ value: 'bg-primary-red', label: 'Primary Red' },
 								{ value: 'pretty-lilac', label: 'Lilac' },
 								{ value: 'baby-blue', label: 'Baby Blue' },
+								{ value: 'puke-green', label: 'Puke Green' },
 							]}
 						/>
 					</PanelRow>
@@ -29,7 +30,8 @@ export class BlockSettings extends React.Component {
 						<ColorPalette
 							colors={[
 								{ name: 'lilac', color: '#b1b1f5' },
-								{ name: 'baby blue', color: '#60aff1' }
+								{ name: 'baby blue', color: '#60aff1' },
+								{ name: 'puke green', color: '#6d8829' }
 							]}
 							value={attributes.borderColor}
 							onChange={(borderColor) =>

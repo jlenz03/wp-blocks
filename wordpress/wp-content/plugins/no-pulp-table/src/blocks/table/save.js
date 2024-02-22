@@ -25,7 +25,7 @@ export default function save({attributes}) {
 	return (
 		<div { ...useBlockProps.save({className: attributes.backgroundColorClass, style: divStyles}) }>
 
-			<div className="album-information">
+			<div className="wp-block-jl-editor-table">
 				<div className="photo">
 					<img src={attributes.imgUrl} alt="Photo of a Taylor Swift Album"/>
 				</div>

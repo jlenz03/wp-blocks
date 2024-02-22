@@ -90,6 +90,9 @@ class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
       }, {
         value: 'baby-blue',
         label: 'Baby Blue'
+      }, {
+        value: 'puke-green',
+        label: 'Puke Green'
       }]
     })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, "Border Color", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
       colors: [{
@@ -98,6 +101,9 @@ class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
       }, {
         name: 'baby blue',
         color: '#60aff1'
+      }, {
+        name: 'puke green',
+        color: '#6d8829'
       }],
       value: attributes.borderColor,
       onChange: borderColor => setAttributes({
@@ -190,7 +196,7 @@ function Edit(props) {
     attributes: attributes,
     setAttributes: setAttributes
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "album-information"
+    className: "wp-block-jl-editor-table"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "photo"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
@@ -338,7 +344,7 @@ function save({
       style: divStyles
     })
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "album-information"
+    className: "wp-block-jl-editor-table"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "photo"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {

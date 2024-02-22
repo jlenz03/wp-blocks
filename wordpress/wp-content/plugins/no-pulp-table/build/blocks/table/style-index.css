@@ -11,26 +11,29 @@
   color: grey;
 }
 
-.wp-block-jl-editor-table {
-  border: 0.1em solid #aaaaaa;
+.wp-block-jl-no-pulp-table {
   border-radius: 0.5em;
-  color: black;
-  margin: 0 auto;
-  background-color: lightgrey;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
-.wp-block-jl-editor-table.bg-primary-blue {
+.wp-block-jl-no-pulp-table.bg-primary-blue {
   background-color: blue;
 }
-.wp-block-jl-editor-table.bg-primary-red {
+.wp-block-jl-no-pulp-table.bg-primary-red {
   background-color: red;
 }
-.wp-block-jl-editor-table.pretty-lilac {
+.wp-block-jl-no-pulp-table.pretty-lilac {
   background-color: #b1b1f5;
 }
-.wp-block-jl-editor-table.baby-blue {
+.wp-block-jl-no-pulp-table.baby-blue {
   background-color: #60aff1;
 }
-.wp-block-jl-editor-table select {
+.wp-block-jl-no-pulp-table.puke-green {
+  background-color: #6d8829;
+}
+.wp-block-jl-no-pulp-table select {
   width: 10em;
 }
 

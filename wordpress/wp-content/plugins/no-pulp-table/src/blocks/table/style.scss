@@ -1,11 +1,12 @@
 
 @import "../../../components/StarRating";
-.wp-block-jl-editor-table {
-  border: .1em solid #aaaaaa;
+.wp-block-jl-no-pulp-table {
+
   border-radius: .5em;
-  color: black;
-  margin: 0 auto;
-  background-color: lightgrey;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 
   &.bg-primary-blue {
 	background-color: blue;
@@ -17,10 +18,15 @@
   &.pretty-lilac {
 	background-color: #b1b1f5;
 
-  }&.baby-blue {
+  }
+  &.baby-blue {
 	 background-color: #60aff1;
 
    }
+  &.puke-green {
+	background-color: #6d8829;
+
+  }
 	select {
 	  width: 10em;
 	}
