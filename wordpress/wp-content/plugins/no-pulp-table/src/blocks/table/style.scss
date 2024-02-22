@@ -1,6 +1,6 @@
 
 @import "../../../components/StarRating";
-.wp-block-jl-testimonial {
+.wp-block-jl-editor-table {
   border: .1em solid #aaaaaa;
   border-radius: .5em;
   color: black;
@@ -14,6 +14,13 @@
   &.bg-primary-red {
 	background-color: red ;
   }
+  &.pretty-lilac {
+	background-color: #b1b1f5;
+
+  }&.baby-blue {
+	 background-color: #60aff1;
+
+   }
 	select {
 	  width: 10em;
 	}

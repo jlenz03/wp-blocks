@@ -11,20 +11,26 @@
   color: grey;
 }
 
-.wp-block-jl-testimonial {
+.wp-block-jl-editor-table {
   border: 0.1em solid #aaaaaa;
   border-radius: 0.5em;
   color: black;
   margin: 0 auto;
   background-color: lightgrey;
 }
-.wp-block-jl-testimonial.bg-primary-blue {
+.wp-block-jl-editor-table.bg-primary-blue {
   background-color: blue;
 }
-.wp-block-jl-testimonial.bg-primary-red {
+.wp-block-jl-editor-table.bg-primary-red {
   background-color: red;
 }
-.wp-block-jl-testimonial select {
+.wp-block-jl-editor-table.pretty-lilac {
+  background-color: #b1b1f5;
+}
+.wp-block-jl-editor-table.baby-blue {
+  background-color: #60aff1;
+}
+.wp-block-jl-editor-table select {
   width: 10em;
 }
 

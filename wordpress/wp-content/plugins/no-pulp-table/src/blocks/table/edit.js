@@ -13,6 +13,7 @@
  */
 import {useBlockProps, PlainText, MediaUploadCheck, MediaUpload} from '@wordpress/block-editor';
 
+
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -22,6 +23,9 @@ import {useBlockProps, PlainText, MediaUploadCheck, MediaUpload} from '@wordpres
 import './editor.scss';
 import StarRating from "../../../components/StarRating";
 import {SelectControl} from "@wordpress/components";
+import React from "react";
+import {BlockSettings} from "./BlockSettings";
+
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -33,9 +37,16 @@ import {SelectControl} from "@wordpress/components";
  */
 export default function Edit(props) {
 	const {attributes, setAttributes} = props
+	const divStyles = {
+		borderColor: attributes.borderColor,
+		color: attributes.textColor
+	}
 	return (
-		<div { ...useBlockProps() }>
-
+		<div { ...useBlockProps({className: attributes.backgroundColorClass, style: divStyles}) }>
+			<BlockSettings
+				attributes={attributes}
+				setAttributes={setAttributes}
+			/>
 
 				<div className="album-information">
 					<div className="photo">
