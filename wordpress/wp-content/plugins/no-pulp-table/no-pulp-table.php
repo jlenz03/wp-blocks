@@ -26,5 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function no_pulp_table_no_pulp_table_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/table' );
+	register_block_type( __DIR__ . '/build/blocks/review-list' );
 }
 add_action( 'init', 'no_pulp_table_no_pulp_table_block_init' );

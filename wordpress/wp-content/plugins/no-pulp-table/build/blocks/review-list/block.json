@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "jl/review-list",
+  "version": "0.1.0",
+  "title": "Review Title",
+  "category": "design",
+  "icon": "id",
+  "description": "Display reviews for your movies",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "review-list",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js",
+  "keywords": [
+    "jl",
+    "review",
+    "post"
+  ],
+  "attributes": {
+    "cardColor": {
+      "type": "string"
+    },
+    "headingColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    }
+  }
+}
