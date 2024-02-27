@@ -48,6 +48,12 @@ class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
         onChange: textColor => setAttributes({
           textColor
         })
+      }, {
+        label: "Link Color",
+        value: attributes.linkColor,
+        onChange: linkColor => setAttributes({
+          linkColor
+        })
       }]
     }));
   }
@@ -116,34 +122,36 @@ function Edit({
     attributes: attributes,
     setAttributes: setAttributes
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flip-card"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flip-card-inner"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flip-card-front"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-    src: "https://2.gravatar.com/avatar/ea8b076b398ee48b71cfaecf898c582b?s=250&d=mm&r=g"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flip-card-back",
+    className: "review-card",
     style: {
       backgroundColor: attributes.cardColor
     }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", {
-    className: "name",
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
     style: {
       color: attributes.headingColor
     }
-  }, "Red Forman"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "position",
+  }, "Review Name"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     style: {
       color: attributes.textColor
     }
-  }, "Manager"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "bio",
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, " Movie Title")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "meta",
     style: {
       color: attributes.textColor
     }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "If I Was A Bird, I\u2019d Fly Into A Ceiling Fan."))))));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "User Name", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, " \u2605\u2605\u2605\u2605 ")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Location")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "",
+    style: {
+      color: attributes.textColor
+    }
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Description here")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "review-button"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    style: {
+      color: attributes.linkColor
+    },
+    href: "#"
+  }, "Read More"))));
 }
 
 /***/ }),
@@ -276,7 +284,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jl/review-list","version":"0.1.0","title":"Review Title","category":"design","icon":"id","description":"Display reviews for your movies","example":{},"supports":{"html":false},"textdomain":"review-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","keywords":["jl","review","post"],"attributes":{"cardColor":{"type":"string"},"headingColor":{"type":"string"},"textColor":{"type":"string"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jl/review-list","version":"0.1.0","title":"Review Title","category":"design","icon":"id","description":"Display reviews for your movies","example":{},"supports":{"html":false},"textdomain":"review-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","keywords":["jl","review","post"],"attributes":{"cardColor":{"type":"string"},"headingColor":{"type":"string"},"textColor":{"type":"string"},"linkColor":{"type":"string"}}}');
 
 /***/ })
 

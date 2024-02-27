@@ -35,20 +35,30 @@ export default function Edit({attributes, setAttributes}) {
 	return (
 		<div { ...useBlockProps() }>
 			<BlockSettings attributes={attributes} setAttributes={setAttributes} />
-			<div className="flip-card">
-				<div className="flip-card-inner">
-					<div className="flip-card-front">
-						<img src="https://2.gravatar.com/avatar/ea8b076b398ee48b71cfaecf898c582b?s=250&d=mm&r=g"/>
-					</div>
-					<div className="flip-card-back" style={{backgroundColor:attributes.cardColor}}>
-						<h3 className="name" style={{color:attributes.headingColor}}>Red Forman</h3>
-						<div className="position" style={{color:attributes.textColor}}>Manager</div>
-						<div className="bio" style={{color:attributes.textColor}}>
-							<p>If I Was A Bird, I’d Fly Into A Ceiling Fan.</p>
-						</div>
-					</div>
+			<div className="review-card" style={{backgroundColor:attributes.cardColor}}>
+
+				<h2 style={{color:attributes.headingColor}}>Review Name</h2>
+				<p style={{color:attributes.textColor}}>
+					<strong> Movie Title</strong></p>
+
+				<div className="meta" style={{color:attributes.textColor}}>
+					<p>User Name<strong> ★★★★ </strong>
+					</p>
+					<p>Location</p>
+
+				</div>
+
+
+				<div className="" style={{color:attributes.textColor}}>
+					<p>Description here
+					</p>
+
+				</div>
+				<div className="review-button">
+					<a style={{color:attributes.linkColor}} href="#">Read More</a>
 				</div>
 			</div>
+
 		</div>
 	);
 }

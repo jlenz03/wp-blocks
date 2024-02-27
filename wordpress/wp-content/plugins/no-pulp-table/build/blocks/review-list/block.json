@@ -31,6 +31,9 @@
     },
     "textColor": {
       "type": "string"
+    },
+    "linkColor": {
+      "type": "string"
     }
   }
 }

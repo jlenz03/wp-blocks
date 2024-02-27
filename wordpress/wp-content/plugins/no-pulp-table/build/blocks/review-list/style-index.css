@@ -8,66 +8,43 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-jl-review-list {
-  padding: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
 }
-.wp-block-jl-review-list .flip-card {
-  display: block;
-  background-color: transparent;
-  width: 250px;
-  height: 250px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px;
-  margin: 5px;
+.wp-block-jl-review-list .review-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.wp-block-jl-review-list .flip-card .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.wp-block-jl-review-list .review-card .meta {
+  line-height: 1;
+  display: inline;
 }
-.wp-block-jl-review-list .flip-card .flip-card-inner .flip-card-front, .wp-block-jl-review-list .flip-card .flip-card-inner .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%; /* Safari */
-  backface-visibility: hidden;
+.wp-block-jl-review-list .review-card p {
+  margin-bottom: 5px;
 }
-.wp-block-jl-review-list .flip-card .flip-card-inner .flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-.wp-block-jl-review-list .flip-card .flip-card-inner .flip-card-front img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.wp-block-jl-review-list .flip-card .flip-card-inner .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-.wp-block-jl-review-list .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-.wp-block-jl-review-list .flip-card .name {
-  font-weight: bold;
-  margin-bottom: 0;
-}
-.wp-block-jl-review-list .flip-card .position {
+.wp-block-jl-review-list .review-card h6, .wp-block-jl-review-list .review-card h2 {
   margin: 0;
 }
-.wp-block-jl-review-list .flip-card .bio {
-  margin: 10px;
-  padding: 10px;
-  border-top: 2px solid rgba(0, 0, 0, 0.4666666667);
-  text-align: left;
+.wp-block-jl-review-list .review-card hr {
+  color: black;
 }
-.wp-block-jl-review-list .flip-card p {
-  margin: 0 0 10px 0;
+.wp-block-jl-review-list .review-card div.review-button {
+  display: flex;
+}
+.wp-block-jl-review-list .review-card div.review-button a {
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  justify-content: end;
+}
+.wp-block-jl-review-list .review-card div.review-button a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

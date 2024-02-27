@@ -25,6 +25,11 @@ export class BlockSettings extends React.Component {
 							value: attributes.textColor,
 							onChange: textColor => setAttributes({textColor})
 						},
+						{
+							label: "Link Color",
+							value: attributes.linkColor,
+							onChange: linkColor => setAttributes({linkColor})
+						}
 					]}
 				/>
 
