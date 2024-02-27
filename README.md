@@ -20,7 +20,7 @@ docker compose up -d
 docker exec -it wp-blocks-wpcli-1 bash -c " 
 wp plugin delete hello akismet ; 
 wp plugin install health-check query-monitor loco-translate blockart-blocks everest-forms --activate ;  
-wp plugin activate mailhog high-pulp-blocks;
+wp plugin activate mailhog high-pulp-blocks final-books no-pulp-table;
 wp theme activate zakra ;
 wp theme delete twentytwenty twentytwentyone ;"
 ```
