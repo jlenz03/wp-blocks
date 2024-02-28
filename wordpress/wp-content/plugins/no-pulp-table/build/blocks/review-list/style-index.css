@@ -14,8 +14,8 @@
   flex-wrap: wrap;
 }
 .wp-block-jl-review-list .review-card {
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: auto auto 20px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

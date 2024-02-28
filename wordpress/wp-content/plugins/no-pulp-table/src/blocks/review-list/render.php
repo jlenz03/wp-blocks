@@ -16,28 +16,34 @@ $query = new WP_Query([
 <div <?php echo get_block_wrapper_attributes(); ?>>
 	<?php while($query->have_posts()):
 	$query->the_post(); ?>
+	<div class="review-card" style="background-color: <?= $attributes['cardColor'] ?>">
+            <?php if ($attributes['showTitle']): ?>
+                <h2 style="color: <?= $attributes['headingColor'] ?>"><?= get_the_title() ?></h2>
+            <?php endif; ?>
 
-		<div  class="review-card" style="background-color: <?= $attributes['cardColor'] ?>">
+            <?php if ($attributes['showBook']): ?>
+                <p style="color: <?= $attributes['textColor'] ?>"><strong><?= get_post_meta(get_the_ID(), 'book', true) ?></strong></p>
+            <?php endif; ?>
 
-			<h2  style="color: <?= $attributes['headingColor'] ?>"><?= get_the_title()?></h2>
-			<p style="color:<?= $attributes['textColor'] ?>" ><strong> <?= get_post_meta(get_the_ID(), 'book', true)?></strong></p>
+            <?php if ($attributes['showMeta']): ?>
+                <div class="meta" style="color: <?= $attributes['textColor'] ?>">
+                    <p><?= get_post_meta(get_the_ID(), 'name', true) ?><strong><?= get_post_meta(get_the_ID(), 'rating', true) ?></strong></p>
+                    <p><?= get_post_meta(get_the_ID(), 'location', true) ?></p>
+                </div>
+            <?php endif; ?>
 
-			<div class="meta" style="color: <?= $attributes['textColor'] ?>">
-					<p ><?= get_post_meta(get_the_ID(), 'name', true)?><strong> <?= get_post_meta(get_the_ID(), 'rating', true)?> </strong></p>
-					<p  ><?= get_post_meta(get_the_ID(), 'location', true)?></p>
+            <?php if ($attributes['showDescription']): ?>
+                <div class="" style="color: <?= $attributes['textColor'] ?>">
+                    <p><?= get_the_excerpt() ?></p>
+                </div>
+            <?php endif; ?>
 
-			</div>
-
-
-			<div class="" style="color: <?= $attributes['textColor'] ?>">
-				<p><?= get_the_excerpt()?></p>
-
-			</div>
-			<div class="review-button">
-			<a  style="color: <?= $attributes['linkColor'] ?>" href="<?= get_the_permalink()?>" >Read More</a>
-			</div>
-		</div>
-
+            <?php if ($attributes['showButton']): ?>
+                <div class="review-button">
+                    <a style="color: <?= $attributes['linkColor'] ?>" href="<?= get_the_permalink() ?>">Read More</a>
+                </div>
+            <?php endif; ?>
+        </div>
 
 <?php endwhile; ?>
 </div>

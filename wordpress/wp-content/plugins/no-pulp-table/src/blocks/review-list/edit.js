@@ -30,35 +30,42 @@ import {BlockSettings} from "./BlockSettings";
  *
  * @return {Element} Element to render.
  */
-export default function Edit({attributes, setAttributes}) {
+export default function Edit({ attributes, setAttributes }) {
 
 	return (
-		<div { ...useBlockProps() }>
+		<div {...useBlockProps()}>
 			<BlockSettings attributes={attributes} setAttributes={setAttributes} />
-			<div className="review-card" style={{backgroundColor:attributes.cardColor}}>
+			<div className="review-card" style={{ backgroundColor: attributes.cardColor }}>
+						{attributes.showTitle && (
+							<h2 style={{ color: attributes.headingColor }}>Review Name</h2>
+						)}
+						{attributes.showBook && (
+							<p style={{ color: attributes.textColor }}>
+								<strong>Movie Title</strong>
+							</p>
+						)}
 
-				<h2 style={{color:attributes.headingColor}}>Review Name</h2>
-				<p style={{color:attributes.textColor}}>
-					<strong> Movie Title</strong></p>
+						{attributes.showMeta && (
+							<div className="meta" style={{ color: attributes.textColor }}>
+								<p>
+									User Name<strong> ★★★★ </strong>
+								</p>
+								<p>Location</p>
 
-				<div className="meta" style={{color:attributes.textColor}}>
-					<p>User Name<strong> ★★★★ </strong>
-					</p>
-					<p>Location</p>
+							</div>
+						)}
+				<p>{attributes.showDescription && "Description here"}</p>
 
-				</div>
+						{attributes.showButton && (
+							<div className="review-button">
+								<a style={{ color: attributes.linkColor }} href="#">
+									Read More
+								</a>
+							</div>
+						)}
 
 
-				<div className="" style={{color:attributes.textColor}}>
-					<p>Description here
-					</p>
-
-				</div>
-				<div className="review-button">
-					<a style={{color:attributes.linkColor}} href="#">Read More</a>
-				</div>
 			</div>
-
 		</div>
 	);
 }

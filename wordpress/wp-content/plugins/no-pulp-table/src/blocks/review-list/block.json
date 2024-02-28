@@ -30,6 +30,30 @@
 	},
 	"linkColor" : {
 	  "type" : "string"
+	},
+	"showTitle": {
+	  "type": "boolean",
+	  "default": true
+	},
+	"showBook": {
+	  "type": "boolean",
+	  "default": true
+	},
+	"showMeta": {
+	  "type": "boolean",
+	  "default": true
+	},
+	"showDescription": {
+	  "type": "boolean",
+	  "default": true
+	},
+	"showButton": {
+	  "type": "boolean",
+	  "default": true
+	},
+	"isVisible": {
+	  "type": "boolean",
+	  "default": true
 	}
   }
 }

@@ -18,9 +18,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
+
+ // Add this import
 
 class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Component) {
   render() {
@@ -28,6 +32,38 @@ class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
       attributes,
       setAttributes
     } = this.props;
+    const {
+      showTitle,
+      showBook,
+      showMeta,
+      showDescription,
+      showButton
+    } = attributes;
+    const onChangeShowTitle = newValue => {
+      setAttributes({
+        showTitle: newValue
+      });
+    };
+    const onChangeShowBook = newValue => {
+      setAttributes({
+        showBook: newValue
+      });
+    };
+    const onChangeShowMeta = newValue => {
+      setAttributes({
+        showMeta: newValue
+      });
+    };
+    const onChangeShowDescription = newValue => {
+      setAttributes({
+        showDescription: newValue
+      });
+    };
+    const onChangeShowButton = newValue => {
+      setAttributes({
+        showButton: newValue
+      });
+    };
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
       title: "Colors",
       colorSettings: [{
@@ -55,7 +91,29 @@ class BlockSettings extends (react__WEBPACK_IMPORTED_MODULE_0___default().Compon
           linkColor
         })
       }]
-    }));
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show/Hide Fields', 'text-domain')
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Title', 'text-domain'),
+      checked: showTitle,
+      onChange: onChangeShowTitle
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Book', 'text-domain'),
+      checked: showBook,
+      onChange: onChangeShowBook
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Meta', 'text-domain'),
+      checked: showMeta,
+      onChange: onChangeShowMeta
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Description', 'text-domain'),
+      checked: showDescription,
+      onChange: onChangeShowDescription
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Button', 'text-domain'),
+      checked: showButton,
+      onChange: onChangeShowButton
+    })));
   }
 }
 
@@ -126,25 +184,20 @@ function Edit({
     style: {
       backgroundColor: attributes.cardColor
     }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
+  }, attributes.showTitle && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
     style: {
       color: attributes.headingColor
     }
-  }, "Review Name"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  }, "Review Name"), attributes.showBook && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     style: {
       color: attributes.textColor
     }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, " Movie Title")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, "Movie Title")), attributes.showMeta && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "meta",
     style: {
       color: attributes.textColor
     }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "User Name", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, " \u2605\u2605\u2605\u2605 ")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Location")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "",
-    style: {
-      color: attributes.textColor
-    }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Description here")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "User Name", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("strong", null, " \u2605\u2605\u2605\u2605 ")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Location")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, attributes.showDescription && "Description here"), attributes.showButton && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "review-button"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     style: {
@@ -284,7 +337,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jl/review-list","version":"0.1.0","title":"Review Title","category":"design","icon":"id","description":"Display reviews for your movies","example":{},"supports":{"html":false},"textdomain":"review-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","keywords":["jl","review","post"],"attributes":{"cardColor":{"type":"string"},"headingColor":{"type":"string"},"textColor":{"type":"string"},"linkColor":{"type":"string"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"jl/review-list","version":"0.1.0","title":"Review Title","category":"design","icon":"id","description":"Display reviews for your movies","example":{},"supports":{"html":false},"textdomain":"review-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js","keywords":["jl","review","post"],"attributes":{"cardColor":{"type":"string"},"headingColor":{"type":"string"},"textColor":{"type":"string"},"linkColor":{"type":"string"},"showTitle":{"type":"boolean","default":true},"showBook":{"type":"boolean","default":true},"showMeta":{"type":"boolean","default":true},"showDescription":{"type":"boolean","default":true},"showButton":{"type":"boolean","default":true},"isVisible":{"type":"boolean","default":true}}}');
 
 /***/ })
 
