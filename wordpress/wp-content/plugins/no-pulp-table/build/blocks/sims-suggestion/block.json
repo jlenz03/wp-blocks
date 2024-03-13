@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "jl/sims-suggestion",
+  "version": "0.1.0",
+  "title": "Sim's Suggestion",
+  "category": "design",
+  "icon": "id",
+  "description": "A form to let users submit a suggestion for the next expansion pack for the Sims 4!.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "sims-suggestion",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "keywords": [
+    "jl",
+    "suggestion",
+    "pulpy",
+    "sims"
+  ]
+}

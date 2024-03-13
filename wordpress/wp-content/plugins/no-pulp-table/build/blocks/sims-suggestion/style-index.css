@@ -1,0 +1,93 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/sims-suggestion/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+.stars .star:hover {
+  cursor: pointer;
+}
+.stars .star.on {
+  color: #FFD700;
+}
+.stars .star.off {
+  color: grey;
+}
+.stars.readonly {
+  pointer-events: none;
+}
+
+.wp-block-jl-sims-suggestion body {
+  font-family: "Microsoft Sans Serif", sans-serif;
+}
+.wp-block-jl-sims-suggestion .new-pack-form {
+  background-color: white;
+  padding: 20px;
+  max-width: 500px;
+  box-shadow: 2px 2px 10px #549b54;
+  border-radius: 7px;
+  border-width: 15px;
+  border-color: #01b201;
+}
+.wp-block-jl-sims-suggestion .new-pack-form input, .wp-block-jl-sims-suggestion .new-pack-form textarea {
+  width: 100%;
+}
+.wp-block-jl-sims-suggestion .new-pack-form .title-with-image {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-image: url(../../images/sims-icon.53ac5416.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+}
+.wp-block-jl-sims-suggestion .new-pack-form .title-with-image h2 {
+  margin: 0;
+  color: #333;
+}
+.wp-block-jl-sims-suggestion .new-pack-form button {
+  background-color: green;
+}
+.wp-block-jl-sims-suggestion .error-msg {
+  background-color: #fc1a1a;
+  padding: 30px;
+  color: white;
+}
+.wp-block-jl-sims-suggestion .pack-card {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px;
+  border: 1px solid #888;
+  box-shadow: 1px 1px 3px #bbb;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wp-block-jl-sims-suggestion .vote {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.wp-block-jl-sims-suggestion .vote button {
+  background-color: #87b287;
+  padding: 3px 5px;
+  margin: 2%;
+}
+.wp-block-jl-sims-suggestion .pack-title {
+  font-weight: bold;
+  font-size: large;
+}
+.wp-block-jl-sims-suggestion .pack-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.wp-block-jl-sims-suggestion .pack-text {
+  flex-grow: 1;
+}
+.wp-block-jl-sims-suggestion .concept-art {
+  max-width: 150px;
+  height: auto;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

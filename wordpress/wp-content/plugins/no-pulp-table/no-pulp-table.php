@@ -27,6 +27,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function no_pulp_table_no_pulp_table_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/table' );
 	register_block_type( __DIR__ . '/build/blocks/review-list' );
+	register_block_type( __DIR__ . '/build/blocks/sims-suggestion' );
+
+
+	//load the backbone js client
+	wp_enqueue_script( 'wp-api' );
 }
 add_action( 'init', 'no_pulp_table_no_pulp_table_block_init' );
 include "patterns.php";
