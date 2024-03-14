@@ -71,7 +71,7 @@
 .wp-block-jl-sims-suggestion .vote button {
   background-color: #87b287;
   padding: 3px 5px;
-  margin: 2%;
+ margin: 0 3% 3% 3%;
 }
 .wp-block-jl-sims-suggestion .pack-title {
   font-weight: bold;
